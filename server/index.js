@@ -1,6 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 const { MongoClient } = require("mongodb");
+// Health-check to prove the server is up
+app.get("/", (req, res) => {
+  res.json({ status: "OK", time: new Date().toISOString() });
+});
 
 const app = express();
 app.use(cors());
