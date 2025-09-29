@@ -2,7 +2,7 @@ const XLSX = require('xlsx');
 const fs = require('fs');
 
 // Load the Excel file
-const workbook = XLSX.readFile('bajau.csv.xlsx');
+const workbook = XLSX.readFile('dictionary.xlsx');
 const sheetName = workbook.SheetNames[0];
 const sheet = workbook.Sheets[sheetName];
 
@@ -16,13 +16,12 @@ rows.forEach(row => {
   if (sinama) {
     dictionary[sinama] = {
       english: row['English'] || '',
-      malay: row['Malay'] || '',
       tagalog: row['Tagalog'] || ''
     };
   }
 });
 
 // Save to file
-fs.writeFileSync('dictionary.json', JSON.stringify(dictionary, null, 2));
-console.log('✅ dictionary.json created!');
+fs.writeFileSync('dictionary2.json', JSON.stringify(dictionary, null, 2));
+console.log('✅ dictionary2.json created!');
 

@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "xlsx": "^0.18.5"
+    "expo": "^54.0.10",
+    "expo-router": "^6.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.10",
+    "typescript": "~5.9.2"
   }
 }
