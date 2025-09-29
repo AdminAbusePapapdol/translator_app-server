@@ -1,7 +1,5 @@
-// App.tsx
-import React from 'react';
-import { Slot } from 'expo-router';
+// App.js
+import { ExpoRoot } from 'expo-router';
+import { registerRootComponent } from 'expo';
 
-export default function App() {
-  return <Slot />;
-}
+export default registerRootComponent(ExpoRoot({}));
